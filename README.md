@@ -24,11 +24,6 @@ Welcome to my Go learning repository! This is where I’ll document my journey t
    - Testing and benchmarking
    - Go’s standard library
 
-## 🚀 Projects
-I’ll be applying these concepts to real-world projects, including:
-- CLI applications
-- Web servers using Go’s `net/http` package
-- Concurrent applications
 
 ## 📂 Folder Structure
 - `basics/` - Contains fundamental concepts and code snippets
