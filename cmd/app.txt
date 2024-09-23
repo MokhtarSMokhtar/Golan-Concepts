@@ -1,0 +1,29 @@
+go-learning-repo/
+├── README.md
+├── cmd/
+│   └── main.go
+├── pkg/
+│   ├── basics/
+│   │   ├── variables.go
+│   │   ├── constants.go
+│   │   └── README.md
+│   ├── controlflow/
+│   │   ├── if_else.go
+│   │   ├── switch.go
+│   │   └── README.md
+│   ├── functions/
+│   │   ├── functions.go
+│   │   ├── methods.go
+│   │   └── README.md
+│   ├── structs/
+│   │   ├── structs.go
+│   │   ├── interfaces.go
+│   │   └── README.md
+│   ├── concurrency/
+│   │   ├── goroutines.go
+│   │   ├── channels.go
+│   │   └── README.md
+│   └── ... (other concepts)
+├── tests/
+│   └── ... (test files)
+└── go.mod
