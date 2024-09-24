@@ -1,4 +1,4 @@
-# Go Learning Journey - Golan  البيان في أركان 
+# Go Learning Journey - Golan 
 
 Welcome to my Go learning repository! This is where I’ll document my journey to mastering the Go programming language, focusing on key concepts and practical implementations.
 
