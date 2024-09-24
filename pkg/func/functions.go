@@ -2,6 +2,10 @@ package _func
 
 import (
 	"fmt"
+	"strconv"
+	"os"
+	"log"
+
 )
 
 // Golan Functions
@@ -196,6 +200,102 @@ func firstClassFunctionExample() {
 	resultOp := applyOperation(10, 5, add)
 	fmt.Println("Apply Operation:", resultOp) // Outputs: Apply Operation: 15
 }
+
+
+
+
+// 5- Ignoring Values
+
+/*
+In Go, functions can return multiple values. However, 
+there are situations where you might not need all the returned values.
+ To handle such cases gracefully, Go provides a mechanism to ignore unwanted values using the blank identifier (_). 
+ This ensures that your code remains clean and that you don't have to assign unused return values to unnecessary variables.
+ result, _ := someFunction()
+
+*/
+func getCoordinates() (int, int, int) {
+    return 10, 20, 30
+}
+
+func ignoringValues() {
+    // strconv.Atoi returns two values: an int and an error
+    num, err := strconv.Atoi("123")
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Println("Number:", num) // Outputs: Number: 123
+    }
+    // If you are certain that the string is a valid integer and want to ignore the error
+    num, _ = strconv.Atoi("456")
+    fmt.Println("Number without error check:", num) // Outputs: Number without error check: 456
+	x, _, z := getCoordinates()
+	fmt.Println("X:", x, "Z:", z) // Outputs: X: 10 Z: 30
+
+}
+
+
+// 6- defer KeyWord
+
+/*
+The defer keyword in Go schedules a function call to be executed after the surrounding function completes.
+ This is particularly useful for resource cleanup tasks, 
+ such as closing files, unlocking mutexes, or releasing other resources,
+ ensuring that these tasks are performed regardless of how the function exits (whether normally or due to an error).
+
+defer functionName(arguments)
+*/
+func readFile(dstName, srcName string) {
+	file, err := os.Open("example.txt")
+	if err != nil { 
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////Main Function/////////////////////////////////////////
