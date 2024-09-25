@@ -15,7 +15,7 @@ Understanding how to define, use, and manipulate functions is essential for effe
 This guide provides a comprehensive overview of functions in Go,
 covering their syntax, features, and practical examples.
 Functions in Go can take zero or more arguments.
-To make code easier to read, the variable type comes after the variable name.
+To make code easier to read, the variables type comes after the variables name.
 */
 
 // 1- Syntax
@@ -88,7 +88,7 @@ func split(sum int) (x, y int) {
 /*
 Usually, functions in Go accept only a fixed number of arguments.
 However, it is also possible to write variadic functions in Go.
-A variadic function is a function that accepts a variable number of arguments.
+A variadic function is a function that accepts a variables number of arguments.
 
 If the type of the last parameter in a function definition is prefixed by ellipsis ...,
 then the function can accept any number of arguments for that parameter.
@@ -99,7 +99,7 @@ func find(a int, b ...int) {
 }
 */
 
-// This function calculates the sum of a variable number of integers.
+// This function calculates the sum of a variables number of integers.
 func sum(nums ...int) int {
 	total := 0
 	for _, num := range nums {
@@ -124,9 +124,9 @@ func() {
 }()
 */
 
-// This function demonstrates an anonymous function assigned to a variable.
+// This function demonstrates an anonymous function assigned to a variables.
 func anonymousExample() {
-	// Anonymous function assigned to a variable
+	// Anonymous function assigned to a variables
 	multiply := func(a, b int) int {
 		return a * b
 	}
