@@ -23,7 +23,7 @@ particularly in terms of simplicity, speed, and scalability.
 
 2. Static typing:
    Golang is a statically typed language,
-   which means that the type of each variable must be declared before it is used.
+   which means that the type of each variables must be declared before it is used.
    This can help to prevent errors at runtime.
 
    Example:

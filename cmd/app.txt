@@ -1,29 +1,27 @@
-go-learning-repo/
-├── README.md
-├── cmd/
-│   └── main.go
-├── pkg/
-│   ├── basics/
-│   │   ├── variables.go
-│   │   ├── constants.go
-│   │   └── README.md
-│   ├── controlflow/
-│   │   ├── if_else.go
-│   │   ├── switch.go
-│   │   └── README.md
-│   ├── functions/
-│   │   ├── functions.go
-│   │   ├── methods.go
-│   │   └── README.md
-│   ├── structs/
-│   │   ├── structs.go
-│   │   ├── interfaces.go
-│   │   └── README.md
-│   ├── concurrency/
-│   │   ├── goroutines.go
-│   │   ├── channels.go
-│   │   └── README.md
-│   └── ... (other concepts)
-├── tests/
-│   └── ... (test files)
-└── go.mod
+go-language-concepts/
+├── go.mod
+├── main.go
+├── datatypes/
+│   └── datatypes.go
+├── variables/
+│   └── variables.go
+├── constants/
+│   └── constants.go
+├── functions/
+│   └── functions.go
+├── structs/
+│   └── structs.go
+├── arrays/
+│   └── arrays.go
+├── slices/
+│   └── slices.go
+├── maps/
+│   └── maps.go
+├── pointers/
+│   └── pointers.go
+├── interfaces/
+│   └── interfaces.go
+├── channels/
+│   └── channels.go
+├── goroutines/
+    └── goroutines.go

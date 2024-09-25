@@ -1,5 +1,5 @@
-// package variable demonstrates basic variables in Go.
-package variable
+// package variables demonstrates basic variables in Go.
+package variables
 
 import "fmt" // Import fmt package for printing
 
@@ -17,7 +17,7 @@ Go provides two primary ways to declare variables:
    var variableName = value // Type inferred
 */
 
-// Examples of variable declarations using var
+// Examples of variables declarations using var
 var age int
 var name string = "Your Name"
 var isStudent = true
@@ -29,14 +29,14 @@ var isStudent = true
    - Automatically infers the type based on the assigned value.
 */
 
-// Example of short variable declaration (commented out to avoid errors outside functions)
+// Example of short variables declaration (commented out to avoid errors outside functions)
 // score := 95.5 // Uncommenting this line will cause an error if not inside a function
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
 2. Type Inference
-Go can automatically determine the type of a variable based on the value assigned to it.
+Go can automatically determine the type of a variables based on the value assigned to it.
 */
 
 // Function demonstrating type inference
@@ -55,7 +55,7 @@ func typeInference() {
 
 /*
 3. Zero Values
-If a variable is declared without an explicit initial value, Go assigns it a zero value based on its type.
+If a variables is declared without an explicit initial value, Go assigns it a zero value based on its type.
 Common Zero Values:
    - int, float64: 0, 0.0
    - string: "" (empty string)
@@ -101,7 +101,7 @@ const MaxUsers = 100
    - Global Variables: Declared outside of functions, accessible throughout the package.
 */
 
-// Example of a global variable
+// Example of a global variables
 var globalVar int = 100
 
 func a() {
