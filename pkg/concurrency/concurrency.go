@@ -2,6 +2,8 @@ package concurrency
 
 import (
 	"fmt"
+	"net/http"
+	"sync"
 	"time"
 )
 
@@ -225,3 +227,92 @@ func testSelect() {
 		}
 	}
 }
+
+//WaitGroups
+//A WaitGroup is a concurrency primitive that waits for a collection of goroutines to finish.
+//It provides a way to block the execution of the main goroutine until other goroutines have completed their tasks.
+//Package: sync
+//Type: sync.WaitGroup
+
+//When you use
+//When you launch multiple goroutines and need to wait for all of them to complete before proceeding.
+//Useful in scenarios where the main function should not exit before background tasks are done.
+
+// 1- Using WaitGroups
+//Add: Increment the WaitGroup counter for each goroutine you plan to wait for.
+//Done: Each goroutine calls Done() when it finishes executing, which decrements the WaitGroup counter.
+//Wait: The main goroutine calls Wait(), which blocks until the WaitGroup counter is zero.
+
+func useWaitGroup() {
+	var wg sync.WaitGroup
+	wg.Add(1) // Increments the counter by 1
+	wg.Done() // Decrements the counter by 1
+	wg.Wait() // Blocks until the counter is 0
+
+}
+
+// Examples
+func worker(id int, wg *sync.WaitGroup) {
+	defer wg.Done() //defer get call whenever the func end
+	fmt.Printf("Worker %d starting\n", id)
+	// Simulate work
+	// time.Sleep(time.Second)
+	fmt.Printf("Worker %d done\n", id)
+}
+func testWaitGroup() {
+	var wg sync.WaitGroup
+
+	for i := 1; i <= 5; i++ {
+		wg.Add(1)
+		go worker(i, &wg)
+	}
+	// Wait for all workers to finish
+	wg.Wait()
+	fmt.Println("All workers completed.")
+	//Worker 1 starting
+	//Worker 2 starting
+	//Worker 3 starting
+	//Worker 4 starting
+	//Worker 5 starting
+	//Worker 2 done
+	//Worker 1 done
+	//Worker 3 done
+	//Worker 4 done
+	//Worker 5 done
+	//All workers completed.
+
+	//We create a WaitGroup called wg.
+	//Before starting each goroutine, we call wg.Add(1) to increment the counter.
+	//Each goroutine calls wg.Done() when it finishes.
+	//The main goroutine calls wg.Wait() to block until the counter is zero.
+}
+
+// WaitGroup with HTTP Requests
+func fetchURL(url string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Printf("Error fetching %s: %v\n", url, err)
+		return
+	}
+	fmt.Printf("Fetched %s: %s\n", url, resp.Status)
+	resp.Body.Close()
+}
+func callHttp() {
+	var wg sync.WaitGroup
+	urls := []string{
+		"https://www.google.com",
+		"https://www.github.com",
+		"https://www.golang.org",
+	}
+
+	for _, url := range urls {
+		wg.Add(1)
+		go fetchURL(url, &wg)
+	}
+
+	wg.Wait()
+	fmt.Println("All URLs fetched.")
+}
+
+//Source :https://www.youtube.com/watch?v=f6kdp27TYZs&t=1739s
