@@ -26,6 +26,7 @@ Welcome to my Go learning repository! This is where I’ll document my journey t
 
 
 ## 📂 Folder Structure
+
 go-language-concepts/
 ├── go.mod
 ├── main.go
@@ -53,6 +54,7 @@ go-language-concepts/
 │   └── channels.go
 ├── goroutines/
     └── goroutines.go
+
 ## 🛠️ Tools & Resources
 - [Go Documentation](https://golang.org/doc/)
 - [Effective Go](https://golang.org/doc/effective_go.html)
