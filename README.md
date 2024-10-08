@@ -25,35 +25,6 @@ Welcome to my Go learning repository! This is where I’ll document my journey t
    - Go’s standard library
 
 
-## 📂 Folder Structure
-
-go-language-concepts/
-├── go.mod
-├── main.go
-├── datatypes/
-│   └── datatypes.go
-├── variables/
-│   └── variables.go
-├── constants/
-│   └── constants.go
-├── functions/
-│   └── functions.go
-├── structs/
-│   └── structs.go
-├── arrays/
-│   └── arrays.go
-├── slices/
-│   └── slices.go
-├── maps/
-│   └── maps.go
-├── pointers/
-│   └── pointers.go
-├── interfaces/
-│   └── interfaces.go
-├── channels/
-│   └── channels.go
-├── goroutines/
-    └── goroutines.go
 
 ## 🛠️ Tools & Resources
 - [Go Documentation](https://golang.org/doc/)
